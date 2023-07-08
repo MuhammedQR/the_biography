@@ -6,6 +6,12 @@ body {
   color: #272829;
 }
 
+:root {
+  --font-defult: 18px;
+  --font-large: 24px;
+  --font-small: 14px;
+}
+
 a {
   color: #149ddd;
   text-decoration: none;
@@ -83,7 +89,7 @@ h6 {
 }
 
 #header .profile h1 {
-  font-size: 24px;
+  font-size: var(--font-large);
   margin: 0;
   padding: 0;
   font-weight: 600;
@@ -99,7 +105,7 @@ h6 {
 }
 
 #header .profile .social-links a {
-  font-size: 18px;
+  font-size: var(--font-defult);
   display: inline-block;
   background: #212431;
   color: #fff;
@@ -172,7 +178,7 @@ h6 {
   padding: 12px 15px;
   margin-bottom: 8px;
   transition: 0.3s;
-  font-size: 15px;
+  font-size: var(--font-small);
 }
 
 .nav-menu a i,
@@ -204,7 +210,7 @@ h6 {
   top: 15px;
   z-index: 9998;
   border: 0;
-  font-size: 24px;
+  font-size: var(--font-large)  ;
   transition: all 0.4s;
   outline: none !important;
   background-color: #149ddd;
@@ -270,7 +276,7 @@ h6 {
 #hero p {
   color: #fff;
   margin-bottom: 50px;
-  font-size: 26px;
+  font-size: var(--font-large);
   font-family: "Poppins", sans-serif;
 }
 
@@ -284,15 +290,15 @@ h6 {
   position: relative;
   width: 500px;
   height: 500px;
-  /* overflow: hidden; */
 }
+
 #hero .hero-img img {
   transition: opacity 0.5s ease-in-out;
   border-radius: 20px;
   box-shadow: 0px 0px 20px 8px white;
-    position: absolute;
-      top: 0;
-      left: 30%;
+  position: absolute;
+  top: 0;
+  left: 30%;
 
 }
 
@@ -318,12 +324,6 @@ h6 {
   #hero h1 {
     font-size: 55px;
     line-height: 1.8;
-  }
-
-  #hero h2 {
-    font-size: 35px;
-    line-height: 24px;
-    margin-bottom: 30px;
   }
   #hero .hero-container {
     text-align: start;
@@ -352,7 +352,7 @@ section {
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: var(--font-large);
   font-weight: bold;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -372,7 +372,7 @@ section {
 }
 
 .section-title p {
-  font-size: 22px;
+  font-size: var(--font-defult);
   margin-bottom: 0;
 }
 
@@ -381,7 +381,7 @@ section {
 --------------------------------------------------------------*/
 .about .content h3 {
   font-weight: 700;
-  font-size: 26px;
+  font-size: var(--font-large);
   color: #173b6c;
 }
 
@@ -395,13 +395,25 @@ section {
   display: flex;
   align-items: center;
 }
+.about .content ul a {
+  transition: 0.3s;
+  color: black;
+}
+.about .content ul li .email {
+  cursor: pointer;
+  font-size: var(--font-small);
+}
+.about .content ul li a:hover {
+  color: #149ddd;
+}
 
 .about .content ul strong {
   margin-right: 10px;
+  margin-left: 10px;
 }
 
 .about .content ul i {
-  font-size: 16px;
+  font-size: var(--font-defult);
   margin-right: 5px;
   color: #149ddd;
   line-height: 0;
@@ -451,7 +463,7 @@ section {
 # studying
 --------------------------------------------------------------*/
 .studying .studying-title {
-  font-size: 26px;
+  font-size: var(--font-large);
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -469,7 +481,7 @@ section {
 
 .studying .studying-item h4 {
   line-height: 18px;
-  font-size: 18px;
+  font-size: var(--font-defult);
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
@@ -478,7 +490,7 @@ section {
 }
 
 .studying .studying-item h5 {
-  font-size: 16px;
+  font-size: var(--font-small);
   background: #e4edf9;
   padding: 5px 15px;
   display: inline-block;
@@ -532,7 +544,7 @@ section {
 
 .experiences .icon i {
   color: #fff;
-  font-size: 24px;
+  font-size: var(--font-large);
   line-height: 0;
 }
 
@@ -548,7 +560,7 @@ section {
   margin-right: 80px;
   font-weight: 700;
   margin-bottom: 15px;
-  font-size: 18px;
+  font-size: var(--font-defult);
 }
 
 .experiences .title a {
@@ -562,7 +574,7 @@ section {
 .experiences .description {
   margin-right: 80px;
   line-height: 24px;
-  font-size: 14px;
+  font-size: var(--font-small);
 }
 
 /*--------------------------------------------------------------
@@ -580,7 +592,7 @@ section {
 }
 
 .contact .info i {
-  font-size: 20px;
+  font-size: var(--font-defult);
   color: #149ddd;
   float: right;
   width: 44px;
@@ -593,23 +605,30 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.contact .info h4 {
-  padding: 0 0 0 60px;
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: #050d18;
-}
-
-.contact .info p {
-  padding: 0 0 10px 60px;
-  margin-bottom: 20px;
-  font-size: 14px;
+.contact .info p  {
+  padding: 0 0 10px 10px;
+  margin-bottom: 30px;
+  font-size: var(--font-defult);
   color: #173b6c;
 }
-
-.contact .info .email p {
-  padding-top: 5px;
+.contact .info p strong {
+  padding-right: 10px;
+}
+.contact .info a {
+  cursor: pointer;
+  font-size: var(--font-small);
+  color: #173b6c;
+  transition: 0.3s;
+}
+.contact .info a:hover {
+  color: #149ddd;
+}
+.contact .info span ,.contact .info a {
+  padding-right: 10px ;
+}
+.contact .info span ,.contact .info a  {
+  cursor: pointer;
+  font-size: var(--font-small);
 }
 
 .contact .info .social-links {
@@ -617,7 +636,7 @@ section {
 }
 
 .contact .info .social-links a {
-  font-size: 18px;
+  font-size: var(--font-defult);
   display: inline-block;
   background: #333;
   color: #fff;
@@ -635,6 +654,7 @@ section {
   background: #149ddd;
   color: #fff;
 }
+
 
 .contact .info .email:hover i,
 .contact .info .address:hover i,
@@ -659,7 +679,7 @@ section {
   color: red;
   margin: 0 0 15px 0;
   font-weight: 400;
-  font-size: 13px;
+  font-size:var(--font-small);
 }
 
 .contact .php-email-form .error-message {
@@ -758,7 +778,7 @@ section {
 }
 
 .breadcrumbs h2 {
-  font-size: 26px;
+  font-size: var(--font-large);
   font-weight: 300;
 }
 
@@ -768,7 +788,7 @@ section {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 15px;
+  font-size: var(--font-small);
 }
 
 .breadcrumbs ol li+li {
@@ -802,7 +822,7 @@ section {
 #footer {
   padding: 15px;
   color: #f4f6fd;
-  font-size: 14px;
+  font-size: var(--font-small);
   position: fixed;
   right: 0;
   bottom: 0;
@@ -818,7 +838,7 @@ section {
 #footer .credits {
   padding-top: 5px;
   text-align: center;
-  font-size: 13px;
+  font-size: var(--font-small);
   color: #eaebf0;
 }
 
