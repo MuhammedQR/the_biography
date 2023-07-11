@@ -30,16 +30,16 @@ h5,
 h6 {
   font-family: "Raleway", sans-serif;
 }
+
 /* lang */
 .lang {
   position: absolute;
   top: 10px;
-  left: 20px;
+  right: 20px;
   margin-top: 10px;
   width: 30px;
   height: 30px;
   text-align: center;
-  z-index: 1000;
 
 }
 .lang a:hover {
@@ -65,7 +65,7 @@ h6 {
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  left: 15px;
+  right: 15px;
   bottom: 15px;
   z-index: 996;
   background: #149ddd;
@@ -97,7 +97,7 @@ h6 {
 #header {
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   bottom: 0;
   width: 300px;
   transition: all ease-in-out 0.5s;
@@ -138,7 +138,7 @@ h6 {
   color: #fff;
   line-height: 1;
   padding: 8px 0;
-  margin-right: 4px;
+  margin-left: 4px;
   border-radius: 50%;
   text-align: center;
   width: 36px;
@@ -153,7 +153,7 @@ h6 {
 }
 
 #main {
-  margin-right: 300px;
+  margin-left: 300px;
 }
 
 .container,
@@ -164,11 +164,11 @@ h6 {
 
 @media (max-width: 1199px) {
   #header {
-    right: -300px;
+    left: -300px;
   }
 
   #main {
-    margin-right: 0;
+    margin-left: 0;
   }
 
   .container,
@@ -211,7 +211,7 @@ h6 {
 .nav-menu a i,
 .nav-menu a:focus i {
   font-size: 24px;
-  padding-right: 8px;
+  padding-left: 8px;
   color: #6f7180;
 }
 
@@ -233,7 +233,7 @@ h6 {
 /* Mobile Navigation */
 .mobile-nav-toggle {
   position: fixed;
-  right: 15px;
+  left: 15px;
   top: 15px;
   z-index: 9998;
   border: 0;
@@ -257,7 +257,7 @@ h6 {
 }
 
 .mobile-nav-active #header {
-  right: 0;
+  left: 0;
 }
 
 /*--------------------------------------------------------------
@@ -266,19 +266,9 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background-color: rgb(41, 40, 40);  
+  background-color: rgb(68, 42, 68);  
 }
 
-#hero:before {
-  content: "";
-  background: rgba(33, 16, 73, 0.3);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1;
-}
 
 #hero .hero-container {
   position: relative;
@@ -288,12 +278,13 @@ h6 {
   text-align: center;
 }
 #hero .hero-text {
+  text-align: center;
   min-width: 300px;
 }
 
 #hero h1 {
   margin: 0 0 10px 0;
-  font-size: 64px;
+  font-size: 35px;
   font-weight: 700;
   line-height: 56px;
   color: #fff;
@@ -323,40 +314,26 @@ h6 {
   border-radius: 20px;
   box-shadow: 0px 0px 20px 8px white;
   position: absolute;
-  top: 0;
-  left: 30%;
+  top: 50%;
+  left: 25%;
 
 }
 
 
 @media (min-width: 1024px) {
-  #hero {
-    background-attachment: fixed;
-    
-  }
   #hero .hero-text {
     width: 50%;
-    margin-right: 200px;
+    margin-left: 230px;
   }
   #hero .hero-img {
     width: 50%;
   }
 }
-/* @media (max-width:1023px ) {
 
-} */
 
 @media (max-width: 768px) {
-  #hero h1 {
-    font-size: 55px;
-    line-height: 1.8;
-  }
-  #hero .hero-container {
-    text-align: start;
-  }
   #hero .hero-text {
     min-width: 300px;
-    /* margin-right: ; */
   }
 
 }
@@ -394,7 +371,7 @@ section {
   height: 3px;
   background: #149ddd;
   bottom: 0;
-  right: 0;
+  left: 0;
 }
 
 .section-title p {
@@ -440,7 +417,7 @@ section {
 
 .about .content ul i {
   font-size: var(--font-defult);
-  margin-right: 5px;
+  margin-left: 5px;
   color: #149ddd;
   line-height: 0;
 }
@@ -469,7 +446,7 @@ section {
 }
 
 .skills .progress .skill .val {
-  float: left;
+  float: right;
   font-style: normal;
 }
 
@@ -499,9 +476,9 @@ section {
 .studying .studying-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-right: 2px solid #1f5297;
+  border-left: 2px solid #1f5297;
   position: relative;
-  padding-right: 10px;
+  padding-left: 10px;
 
 }
 
@@ -525,7 +502,7 @@ section {
 }
 
 .studying .studying-item ul {
-  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .studying .studying-item ul li {
@@ -542,7 +519,7 @@ section {
   width: 16px;
   height: 16px;
   border-radius: 50px;
-  right: -9px;
+  left: -9px;
   top: 0;
   background: #fff;
   border: 2px solid #1f5297;
@@ -556,7 +533,7 @@ section {
 }
 
 .experiences .icon {
-  float: right;
+  float: left;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -583,7 +560,7 @@ section {
 }
 
 .experiences .title {
-  margin-right: 80px;
+  margin-left: 80px;
   font-weight: 700;
   margin-bottom: 15px;
   font-size: var(--font-defult);
@@ -598,7 +575,7 @@ section {
 }
 
 .experiences .description {
-  margin-right: 80px;
+  margin-left: 80px;
   line-height: 24px;
   font-size: var(--font-small);
 }
@@ -620,7 +597,7 @@ section {
 .contact .info i {
   font-size: var(--font-defult);
   color: #149ddd;
-  float: right;
+  float: left;
   width: 44px;
   height: 44px;
   background: #dff3fc;
@@ -638,7 +615,7 @@ section {
   color: #173b6c;
 }
 .contact .info p strong {
-  padding-right: 10px;
+  padding-left: 10px;
 }
 .contact .info a {
   cursor: pointer;
@@ -650,7 +627,7 @@ section {
   color: #149ddd;
 }
 .contact .info span ,.contact .info a {
-  padding-right: 10px ;
+  padding-left: 10px ;
 }
 .contact .info span ,.contact .info a  {
   cursor: pointer;
@@ -658,7 +635,7 @@ section {
 }
 
 .contact .info .social-links {
-  padding-right: 60px;
+  padding-left: 60px;
 }
 
 .contact .info .social-links a {
@@ -673,7 +650,7 @@ section {
   width: 36px;
   height: 36px;
   transition: 0.3s;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .contact .info .social-links a:hover {
@@ -712,7 +689,7 @@ section {
   display: none;
   color: #fff;
   background: #ed3c0d;
-  text-align: right;
+  text-align: left;
   padding: 15px;
   font-weight: 600;
 }
@@ -818,12 +795,12 @@ section {
 }
 
 .breadcrumbs ol li+li {
-  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .breadcrumbs ol li+li::before {
   display: inline-block;
-  padding-right: 10px;
+  padding-left: 10px;
   color: #0e2442;
   content: "/";
 }
@@ -850,14 +827,14 @@ section {
   color: #f4f6fd;
   font-size: var(--font-small);
   position: fixed;
-  right: 0;
+  left: 0;
   bottom: 0;
   width: 300px;
   z-index: 9999;
   background: #040b14;
 }
 
-#footer .copyright {
+#footer .copyleft {
   text-align: center;
 }
 
@@ -872,6 +849,6 @@ section {
   #footer {
     position: static;
     width: auto;
-    padding-right: 20px 15px;
+    padding-left: 20px 15px;
   }
 }
